@@ -9,7 +9,7 @@ RUN sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev 
 RUN sudo apt-get install -y wget
 RUN mkdir /tmp/ruby-dist
 RUN wget http://ftp.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.gz -O /tmp/ruby-dist.tar.gz
-RUN tar -xzf /tmp/ruby-dist.tar.gz -C /tmp/ruby-dist
+RUN tar -xzf /tmp/ruby-dist.tar.gz -C /tmp/ruby-dist --strip-components=1
 RUN cd /tmp/ruby-dist
 RUN /tmp/ruby-dist/configure
 RUN make && make install
