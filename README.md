@@ -1,4 +1,4 @@
-# docker_ubuntu-ruby
+# Ruby development environment with bower
 This is a local development environment. Don't use it on exposed hosts!
 
 A container with ruby 2.2 and bower installed.
