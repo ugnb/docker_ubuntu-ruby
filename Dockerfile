@@ -15,6 +15,8 @@ RUN /tmp/ruby-dist/configure
 RUN make && make install
 RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
+RUN gem install bundler
+
 RUN sudo apt-get install -y nodejs
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN sudo apt-get install -y npm
